@@ -1,11 +1,9 @@
-const core = require('./core.js')
+const czero = require('./core.js').czero;
 const account = require('./account.js')
 const tx = require('./tx.js')
 
 module.exports = {
-  Init: (type) => {
-    core.InitCZero(type)
-  },
+  czero,
   Account: account,
   Tx: tx
 }

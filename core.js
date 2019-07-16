@@ -5,6 +5,8 @@ const ref = require('ref')
 const utils = require('./utils.js')
 const base58 = require('bs58')
 
+let czero = undefined;
+
 function ReportError (msg) {
   throw new Error(msg || 'Assertion failed')
 }
@@ -57,14 +59,8 @@ function InitCZero () {
   return czero
 }
 
-var czero = InitCZero()
-
-function GetCZero () {
-  return czero
-}
-
 module.exports = {
-  GetCZero,
+  czero:InitCZero(),
   NewBytesBuffer,
   NewBytesBufferFromBase58,
   ReportError
